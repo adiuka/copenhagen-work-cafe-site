@@ -1,0 +1,80 @@
+{% include "header.html" %}
+
+<!-- Page Header-->
+<div class="container mt-4">
+  <div class="row">
+      <!-- Left Column: Cafe Image (larger on desktop) -->
+      <div class="col-12 col-md-8 mb-4">
+          <img src="{{ cafe.img_url }}" class="img-fluid rounded shadow" alt="cafe_pic" style="object-fit: cover; max-height: 500px; width: 100%;">
+      </div>
+  </div>
+
+  <!-- Cafe Info Section (text + icons below image) -->
+  <div class="row">
+      <div class="col-12 col-md-8">
+          <!-- Cafe Name and Location -->
+          <h2 class="mb-3">{{ cafe.name }} </h2>
+          <p class="lead text-muted mb-4">{{ cafe.location }} | Price Range: ~ {{ cafe.coffee_price }}</p>
+
+          <!-- Icons for features -->
+          <div class="d-flex flex-column align-items-start gap-3 mb-4">
+                {% if cafe.has_toilet %}
+                    <div class="d-flex align-items-center gap-2">
+                        <i class="bi bi-badge-wc text-success fs-4" title="Has Toilet"></i>
+                        <span>Has Toilet</span>
+                    </div>
+                {% else %}
+                    <div class="d-flex align-items-center gap-2">
+                        <i class="bi bi-badge-wc text-danger fs-4" title="Has Toilet"></i>
+                        <span>No Toilet</span>
+                    </div>
+                {% endif %}
+                {% if cafe.has_wifi %}
+                    <div class="d-flex align-items-center gap-2">
+                        <i class="bi bi-wifi text-success fs-4" title="Has WiFi"></i>
+                        <span>Free Wifi</span>
+                    </div>
+                {% else %}
+                    <div class="d-flex align-items-center gap-2">
+                        <i class="bi bi-wifi text-danger fs-4" title="No WiFi"></i>
+                        <span>No Wifi</span>
+                    </div>
+                {% endif %}
+                {% if cafe.has_sockets %}
+                    <div class="d-flex align-items-center gap-2">
+                        <i class="bi bi-plug text-success fs-4" title="Has Sockets"></i>
+                        <span>Has Power Sockets</span>
+                    </div>
+                {% else %}
+                    <div class="d-flex align-items-center gap-2">
+                        <i class="bi bi-plug text-danger fs-4" title="No Sockets"></i>
+                        <span>No Power Sockets</span>
+                    </div>
+                {% endif %}
+                {% if cafe.vegan_options %}
+                    <div class="d-flex align-items-center gap-2">
+                        <i class="bi bi-tree text-success fs-4" title="Vegan Options Available"></i> 
+                        <span>Has Vegan Options</span>
+                    </div>
+                {% else %}
+                    <div class="d-flex align-items-center gap-2">
+                        <i class="bi bi-tree text-danger fs-4" title="No Veggie"></i>
+                        <span>No Vegan Options</span>
+                    </div>
+                {% endif %}
+          </div>
+  </div>
+
+  <!-- Map Section: Bottom -->
+  <div class="row mt-5">
+      <div class="col-12">
+          <iframe src="{{ cafe.map_url }}"
+                  class="rounded border w-100" 
+                  style="height: 300px; border: 0;">
+          </iframe>
+      </div>
+  </div>
+</div>
+
+  
+{% include "footer.html" %}
