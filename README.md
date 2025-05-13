@@ -13,8 +13,6 @@ NOTE: The Project is not yet finished and requires some additional functionality
 5. Adding a contact page, mostly when it is ready for launch
 
 Here are some pictures of how it looks and works:
+![hippo](https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExNHluZzkyOXIyZ2k1ZzAwYzg5MmtpampldHBnOGF5eTE3N2lyNWxsdiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/pgycKejyELlyjIG6rr/giphy.gif)
 ![image](https://github.com/user-attachments/assets/3dd2f238-0f3c-4285-abd8-829d20afd96b)
 ![image](https://github.com/user-attachments/assets/5892af2a-d8c0-4111-90b1-6d37f748c6ea)
-![image](https://github.com/user-attachments/assets/61717555-df47-4a47-9717-a3e30815477d)
-
-
